@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ### Primary
+$Green-500: hsl(158, 36%, 37%);
+$Green-700: hsl(158, 42%, 18%);
+
+// ### Neutral
+$Black: hsl(212, 21%, 14%);
+$Grey: hsl(228, 12%, 48%);
+$Cream: hsl(30, 38%, 92%);
+$White: hsl(0, 0%, 100%);
+
+// fonts
+$Fraunces: "Fraunces", serif;
+$Montserrat: "Montserrat", sans-serif;
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: $Cream;
+    font-family: $Montserrat;
+
+    .card {
+        background-color: $White;
+        max-width: 600px;
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .image_wrapper {
+            width: 100%;
+
+            @media (min-width: 768px) {
+                width: 50%;
+            }
+
+            .card_image {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+                @media (min-width: 768px) {
+                    height: 100%;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+        }
+
+
+        &_content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media (min-width: 768px) {
+                width: 50%;
+            }
+
+            .category {
+                font-size: 1rem;
+                letter-spacing: 2px;
+                color: $Grey;
+            }
+
+            .title {
+                font-size: 2rem;
+                font-family: $Fraunces;
+                font-weight: 700;
+                color: $Black;
+            }
+
+            .description {
+                font-size: 0.875rem;
+                color: $Grey;
+                line-height: 1.5;
+            }
+
+            .price_group {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                
+                .price {
+                    font-family: $Fraunces;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $Green-500;
+                }
+
+                .original {
+                    color: $Grey;
+                    text-decoration: line-through;
+                    font-size: 0.875rem;
+                }
+            }
+
+            .add_to_cart {
+                color: $White;
+                border: none;
+                background-color: $Green-500;
+                padding: 1rem;
+                border-radius: 8px;
+                font-size: 1rem;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: $Green-700;
+                }
+            }
+        }
+    }
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}

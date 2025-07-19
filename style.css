@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+}
+body .card {
+  background-color: hsl(0, 0%, 100%);
+  max-width: 600px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  body .card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+body .card .image_wrapper {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  body .card .image_wrapper {
+    width: 50%;
+  }
+}
+body .card .image_wrapper .card_image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+@media (min-width: 768px) {
+  body .card .image_wrapper .card_image {
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+body .card_content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  body .card_content {
+    width: 50%;
+  }
+}
+body .card_content .category {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: hsl(228, 12%, 48%);
+}
+body .card_content .title {
+  font-size: 2rem;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+}
+body .card_content .description {
+  font-size: 0.875rem;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5;
+}
+body .card_content .price_group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+body .card_content .price_group .price {
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+body .card_content .price_group .original {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 0.875rem;
+}
+body .card_content .add_to_cart {
+  color: hsl(0, 0%, 100%);
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+body .card_content .add_to_cart:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+body .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
